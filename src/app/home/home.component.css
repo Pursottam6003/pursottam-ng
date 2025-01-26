@@ -1,0 +1,4 @@
+  .sticky-navbar.scrolled {
+    background-color: hsl(210 17% 98% / 65%);
+    backdrop-filter: blur(8px); /* Adjust the rgba values for desired translucency */
+  }
