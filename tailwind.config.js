@@ -9,6 +9,8 @@ module.exports = {
         customColor: 'hsl(210 17% 98% / 65%)',
         brandfill: 'rgb(31, 27, 24)',
         surfaceBg: '#e9ece5',
+        surfaceBg2: '#dee2e6',
+
       },
     },
   },

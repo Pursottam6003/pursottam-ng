@@ -99,29 +99,30 @@
     <div data-tabs="true">
         <ul class="max-w-full overflow-auto grid grid-flow-col auto-cols-[1fr] items-center text-fluid--1"
             role="tablist">
-            <li class="flex-grow hover:bg-surfaceBg cursor-pointer" role="presentation">
-                <a routerLink="home/feed" routerLinkActive="active"
+           
+            <li (click)="navigateTo('home/feed')" class="flex-grow hover:bg-surfaceBg cursor-pointer" role="presentation">
+                <a [class.active]="isActive('feed')" routerLinkActive="active"
                     class="font-bold grid place-items-center w-full h-full text-text-4 hover:no-underline focus-visible:outline-0 focus-visible:bg-surface-2"
                     role="tab" id="tab1" aria-selected="true">
-                    <span class="p-2 px-4 border-y-4 border-transparent border-b-black text-text-1">Feed</span>
+                    <span class="p-2 px-4 border-y-4 border-transparent  text-text-1">Feed</span>
                 </a>
             </li>
-            <li class="flex-grow hover:bg-surfaceBg cursor-pointer" role="presentation">
-                <a routerLink="home/about" routerLinkActive="active"
+            <li (click)="navigateTo('home/about')" class="flex-grow hover:bg-surfaceBg cursor-pointer" role="presentation">
+                <a [class.active]="isActive('about')" routerLinkActive="active"
                     class="font-bold grid place-items-center w-full h-full text-text-4 hover:no-underline focus-visible:outline-0 focus-visible:bg-surface-2"
                     role="tab" id="tab2" tabindex="-1">
                     <span class="p-2 px-4 border-y-4 border-transparent">About</span>
                 </a>
             </li>
-            <li class="flex-grow hover:bg-surfaceBg cursor-pointer" role="presentation">
-                <a routerLink="home/content" routerLinkActive="active"
+            <li (click)="navigateTo('home/content')" class="flex-grow hover:bg-surfaceBg cursor-pointer" role="presentation">
+                <a [class.active]="isActive('content')" routerLink="home/content" routerLinkActive="active"
                     class="font-bold grid place-items-center w-full h-full text-text-4 hover:no-underline focus-visible:outline-0 focus-visible:bg-surface-2"
                     role="tab" id="tab3" tabindex="-1">
                     <span class="p-2 px-4 border-y-4 border-transparent">Content</span>
                 </a>
             </li>
-            <li class="flex-grow hover:bg-surfaceBg cursor-pointer" role="presentation">
-                <a routerLink="home/guestbook" routerLinkActive="active"
+            <li (click)="navigateTo('home/guestbook')" class="flex-grow hover:bg-surfaceBg cursor-pointer" role="presentation">
+                <a [class.active]="isActive('guestbook')" 
                     class="font-bold grid place-items-center w-full h-full text-text-4 hover:no-underline focus-visible:outline-0 focus-visible:bg-surface-2"
                     role="tab" id="tab4" tabindex="-1">
                     <span class="p-2 px-4 border-y-4 border-transparent">Guestbook</span>

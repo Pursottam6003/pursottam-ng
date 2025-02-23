@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { RouterLinkActive, RouterOutlet } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -17,4 +18,18 @@ export class HomeComponent {
       navbar?.classList.remove('scrolled');
     }
   }
+
+  constructor(private router: Router) {}
+
+  navigateTo(route: string) {
+    this.router.navigate([route]);
+  }
+
+  isActive(route: string): boolean {
+    console.log(this.router.url);
+    const sliced = this.router.url.slice(6);
+    console.log(sliced);
+    return sliced === `${route}`;
+  }
+
 }
