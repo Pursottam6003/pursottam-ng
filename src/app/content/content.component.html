@@ -1,1 +1,17 @@
-<p>content works!</p>
+<div>
+    <p>
+      When you make a lot of content, it's hard to keep tabs on all of it. Here are some links to various things I
+      create or have been involved with.
+    </p>
+  
+    <p class="text-2xl font-bold">Latest Posts</p>
+    <p class="mb-2">I write a bunch, here are some of my latest posts.</p>
+  
+    <app-link-list
+      [links]="[
+        { url: 'https://www.linkedin.com/posts/pursottamsah_connections-activity-7298746978958524417-M1g9?utm_source=share&utm_medium=member_desktop&rcm=ACoAADM789oBO7UGIF3CDhQVd2kibNwf4_JG9Xw', text: 'Important Playlists you cant miss for placements', date:'Posted on Linkedin Feb 2025', tags:'placements,jobs,preperation,batch-2025' },
+        { url: 'https://www.linkedin.com/posts/pursottamsah_you-should-give-one-chance-to-your-passions-activity-7296197165796757505-bI3q?utm_source=share&utm_medium=member_desktop&rcm=ACoAADM789oBO7UGIF3CDhQVd2kibNwf4_JG9Xw', text: 'You should give one chance to your passions', date:'Posted on Linkedin Feb 2025', tags:'passion,dream,happy' },
+        { url: 'https://www.linkedin.com/posts/pursottamsah_connections-faang-maang-activity-7294402718327062528-NbXF?utm_source=share&utm_medium=member_desktop&rcm=ACoAADM789oBO7UGIF3CDhQVd2kibNwf4_JG9Xw', text: 'You need to master your Aptitude skills as well.', date:'Posted on Linkedin Jan 2025', tags:'placements,jobs,preperation,batch-2025' },
+      ]"
+    ></app-link-list>
+  </div>

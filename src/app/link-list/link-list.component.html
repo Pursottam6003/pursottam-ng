@@ -1,0 +1,30 @@
+<div class="text-sm text-gray-500 ">
+  <ul>
+    <li *ngFor="let link of links">
+      <a class="hover:underline text-lg"  [href]="link.url" target="_blank" rel="noopener noreferrer">
+        {{ link.text }}
+      </a>
+      <div class="flex flex-row justify-between">
+          
+          <p class="text-xs">{{ link.date}} </p>
+          
+          <span class="flex flex-row gap-2">
+            <ng-container *ngFor="let tag of link.tags.split(',')">
+              <p-tag [value]=tag  [severity]=getRandomColor() />
+            </ng-container>
+          </span>
+
+
+          <!-- <p-tag [value]="'New'" [severity]="getRandomColor()" [rounded]="true"></p-tag> -->
+
+<!-- 
+          <span>
+            <ng-container *ngFor="let tag of link.tags.split(',')">
+              
+              <p-tag [value]="tag.trim()" [severity]="getRandomColor()" [rounded]="true"></p-tag>
+            </ng-container>
+          </span> -->
+        </div>
+    </li>
+  </ul>
+</div>
